@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>guacDev</title>
+    <title>guacTimer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-    <img src="logo.png" alt="logo">
-    <p>Website under construction...</p>
+    <header>
+        <img src="logo.png" alt="logo">
+    </header>
+    
+    <main>
+        <div class="counter"></div>
+        <input type="number" id="seconds" placeholder="00s">
+        <div>
+            <a href="index.html"><button class="btn start">Reset</button></a>
+            <button class="btn start" id="start" value="1" onclick="check(this)">Start</button>
+            <button class="btn start" id="continue" value="1" onclick="check(this)">Continue</button>
+            <button class="btn stop" id="stop" value="0" onclick="check(this)">Stop</button>
+            <button class="btn start" id="ok" onclick="toSubmit()">Submit</button>
+        </div>
+    </main>
+    
+    <footer>
+    </footer>
+    
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
