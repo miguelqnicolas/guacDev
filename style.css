@@ -38,6 +38,7 @@ header img {
 
 header p {
     font-size: 1.25rem;
+    padding-bottom: 0.25rem;
 }
 
 main {
@@ -54,8 +55,6 @@ main div:last-child {
 .button {
     height: 45px;
     width: 105px;
-    /* padding: 0.75rem 1.25rem; */
-    /* needed to change to pixels, with padding all buttons were different sizes and when clicking stop, the continue button would shift everything, keeping for future reference */
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -87,21 +86,26 @@ main div:last-child {
 }
 
 #seconds {
-    width: 5rem;
+    width: 3.5rem;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     background: none;
     border: none;
-    /* border-bottom: 2px solid gray; */
     outline: none;
     margin-bottom: 0.5rem;
 }
 
 #seconds::placeholder {
-    color: lightgray;
+    opacity: 0.75;
 }
 
 #start, #stop, #continue {
     display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
 }
