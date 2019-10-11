@@ -7,28 +7,33 @@
     <title>guacTimer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="logo">
-    </header>
-    
-    <main>
-        <div class="counter"></div>
-        <input type="number" id="seconds" placeholder="00s">
-        <div>
-            <a href="index.html"><button class="btn start">Reset</button></a>
-            <button class="btn start" id="start" value="1" onclick="check(this)">Start</button>
-            <button class="btn start" id="continue" value="1" onclick="check(this)">Continue</button>
-            <button class="btn stop" id="stop" value="0" onclick="check(this)">Stop</button>
-            <button class="btn start" id="ok" onclick="toSubmit()">Submit</button>
-        </div>
-    </main>
-    
-    <footer>
-    </footer>
-    
+    <div class="container">
+        <header>
+            <div>
+                <img src="logo.png" alt="logo">
+                <h1>guacTimer</h1>
+            </div>
+            <p>A simple timer with an elegant user interface.</p>
+            <p>Tip: 300 seconds is 5 minutes.</p>
+        </header>
+        
+        <main>
+            <div class="counter"></div>
+            <input type="number" id="seconds" placeholder="00s">
+            <div>
+                <button class="button start" id="start" value="1" onclick="check(this)">Start</button>
+                <button class="button start" id="continue" value="1" onclick="check(this)">Continue</button>
+                <button class="button stop" id="stop" value="0" onclick="check(this)">Stop</button>
+                <button class="button start" id="ok" onclick="toSubmit()">Submit</button>
+                <a href="index.html"><button class="button start">Reset</button></a>
+            </div>
+        </main>
+    </div>
+
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
