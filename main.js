@@ -2,10 +2,10 @@ const container = document.querySelector('.counter');
 const buttonsDiv = document.querySelector('.buttons');
 const secInput = document.getElementById('seconds');
 
-var seconds;
-var remseconds;
-var minutes;
-var toCount = false;
+let seconds;
+let remseconds;
+let minutes;
+let toCount = false;
 
 function toSubmit() {
     display('start');
