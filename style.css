@@ -32,8 +32,12 @@ header div {
     margin-bottom: 0.5rem;
 }
 
-header img {
+header div img {
     height: 4rem;
+}
+
+header div h1 {
+    font-weight: 500;
 }
 
 header p {
