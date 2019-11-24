@@ -15,12 +15,12 @@ function toSubmit() {
     counting();
 }
 
-function display(e) {
-    document.getElementById(e).style.display = 'block';
+function display(item) {
+    document.getElementById(item).style.display = 'block';
 }
 
-function remove(e) {
-    document.getElementById(e).style.display = 'none';
+function remove(item) {
+    document.getElementById(item).style.display = 'none';
 }
 
 function check(stat) {
