@@ -9,9 +9,7 @@ const Header = () => (
                 <h1>guacDev</h1>
             </div>
             <nav>
-                <a href='#'>Services</a>
-                <a href='#'>Portfolio</a>
-                <a href='#'><button>Contact</button></a>
+                <a href='#'><i class="fas fa-bars"></i></a>
             </nav>
         </div>
         

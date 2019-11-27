@@ -3,9 +3,14 @@
 .header {
     height: 10vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header div {
@@ -23,13 +28,9 @@
     color: whitesmoke;
 }
 
-.header nav a button {
+.fa-bars {
     font-size: 1rem;
-}
-
-.header-container {
-    width: 95%;
-    margin: 0 auto;
+    color: whitesmoke;
 }
 
 /* home */
