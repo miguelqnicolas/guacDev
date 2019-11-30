@@ -11,7 +11,8 @@ const Header = () => (
             <nav>
                 <a href='#'>Services</a>
                 <a href='#'>Projects</a>
-                <a href='#'>Contact</a>
+                <a href='mailto:inquiries@guacdev.com'>Contact</a>
+                {/* will build out form later */}
             </nav>
             {/* would like to do a hamburger menu */}
         </div>
