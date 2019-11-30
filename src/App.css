@@ -54,6 +54,7 @@
 }
 
 .home h2 {
+    margin-bottom: 8px;
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
@@ -61,7 +62,7 @@
 }
 
 .home h3 {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
@@ -70,8 +71,23 @@
 
 .home button {
     padding: 8px 16px;
+    background: whitesmoke;
     border: none;
     border-radius: 5px;
     font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem;
     font-weight: 500;
+    color: black;
+}
+
+@media (min-width: 375px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 414px) {
+    html {
+        font-size: 24px;
+    }
 }
