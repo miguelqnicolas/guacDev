@@ -9,10 +9,12 @@ const Header = () => (
                 <h1>guacDev</h1>
             </div>
             <nav>
-                <a href='#'><i class="fas fa-bars"></i></a>
+                <a href='#'>Services</a>
+                <a href='#'>Projects</a>
+                <a href='#'>Contact</a>
             </nav>
+            {/* would like to do a hamburger menu */}
         </div>
-        
     </div>
 );
 

@@ -1,41 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
 
 .header {
-    height: 10vh;
-    display: flex;
+    height: 15vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header-container {
+    height: 100%;
     width: 90%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.header div {
+.header-container div {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.header div img {
-    height: 32px;
+.header-container div img {
+    height: 1.75rem;
 }
 
-.header div h1 {
+.header-container div h1 {
     font-size: 1.25rem;
     font-weight: 500;
     color: whitesmoke;
 }
 
-.fa-bars {
-    font-size: 1rem;
+.header-container nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container nav a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
     color: whitesmoke;
 }
 
 /* home */
 .home {
-    height: 80vh;
+    height: 75vh;
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -54,7 +63,7 @@
 .home h3 {
     margin-bottom: 16px;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
     color: whitesmoke;
 }
