@@ -24,7 +24,11 @@
     height: 1.75rem;
 }
 
-.header-container div h1 {
+.header-container div a {
+    text-decoration: none;
+}
+
+.header-container div a h1 {
     font-size: 1.25rem;
     font-weight: 500;
     color: whitesmoke;
@@ -81,6 +85,42 @@
     outline: none;
 }
 
+/* services */
+
+.services {
+    height: 75vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+/* portfolio */
+.portfolio {
+    height: 75vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+/* media queries */
 @media (min-width: 375px) {
     html {
         font-size: 20px;
