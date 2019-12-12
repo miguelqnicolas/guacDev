@@ -1,21 +1,19 @@
-import React from 'react';
-import {Route} from 'react-router-dom';
-import Header from './Header';
-import Home from './Home';
-import Services from './Services';
-import Portfolio from './Portfolio';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
+const App = () => {
+	const [input, setInput] = useState('');
+
+	const onChange = event => {
+		setInput(event.target.value);
+	};
+
 	return (
-		<>
-			<Header/>
-
-			<Route exact path='/' component={Home}></Route>
-			<Route path='/services' component={Services}></Route>
-			<Route path='/portfolio' component={Portfolio}></Route>
-		</>
+		<div>
+			<form>
+				<input type='text' value={input}/>
+			</form>
+		</div>
 	);
-}
+};
 
 export default App;
