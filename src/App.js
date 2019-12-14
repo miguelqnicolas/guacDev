@@ -20,11 +20,13 @@ const App = () => {
 	}
 
 	return (
-		<div>
-			<form onSubmit={onSubmit}>
+		<div className='App'>
+			<h1>guacSearch</h1>
+			<form onSubmit={onSubmit} autoComplete='off' spellCheck='false'>
 				<input type='text' value={input} onChange={onChange}/>
-				<button type='submit'>Search</button>
+				<button type='submit'><i className="fas fa-search"></i></button>
 			</form>
+			<p>Search for an item on multiple marketplaces in one go!</p>
 		</div>
 	);
 };
