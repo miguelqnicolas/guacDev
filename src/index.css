@@ -1,66 +1,12 @@
 * {
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    background: #1c1c1c;
-    font-family: 'Quicksand', sans-serif;
-    color: whitesmoke;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.App {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.App h1 {
-    margin-bottom: 16px;
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.App form {
-    margin-bottom: 16px;
-    display: flex;
-}
-
-.App form input {
-    height: 45.95px;
-    width: 518.25px;
-    padding: 8px 16px;
-    background: #333333;
-    border: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    outline: none;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    color: whitesmoke;
-}
-
-.App form button {
-    height: 45.95px;
-    width: 52.25px;
-    background: #333333;
-    border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    outline: none;
-    cursor: pointer;
-}
-
-.fa-search {
-    font-size: 18px;
-    color: whitesmoke;
-}
-
-.App p {
-    font-size: 18px;
+	background: linear-gradient(to right, #348F50, #56B4D3);
+	font-family: 'Quicksand', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
