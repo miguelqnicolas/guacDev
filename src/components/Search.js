@@ -88,11 +88,6 @@ const Search = props => {
                     <p>Volume: {props.data['Time Series (Daily)'][yesterday]['5. volume']}</p>
                 </div>
             }
-            {props.data === undefined &&
-                <div className='stock'>
-                    <h2>Ticker symbol not found</h2>
-                </div>
-            }
             {props.error && <h2>There was an error...</h2>}
         </SearchContainer>
     );
