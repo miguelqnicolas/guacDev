@@ -88,7 +88,7 @@ const Search = props => {
                     <p>Volume: {props.data['Time Series (Daily)'][yesterday]['5. volume']}</p>
                 </div>
             }
-            {!props.data &&
+            {props.data === undefined &&
                 <div className='stock'>
                     <h2>Ticker symbol not found</h2>
                 </div>
