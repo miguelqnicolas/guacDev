@@ -1,24 +1,29 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import styled from 'styled-components';
 import logo from '../img/logo.png';
 
+const HeaderContainer = styled.div`
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 1.75rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: whitesmoke;
+    }
+`
+
 const Header = () => (
-    <div className='header'>
-        <div className='header-container'>
-            <div>
-                <img src={logo} alt='logo'></img>
-                <h1>guacDev</h1>
-                {/* <Link to='/'><h1>guacDev</h1></Link> */}
-            </div>
-            <nav>
-                {/* <Link to='/services'>Services</Link>
-                <Link to='/portfolio'>Portfolio</Link> */}
-                <a href='mailto:inquiries@guacdev.com'>Contact</a>
-                {/* will build out a form later */}
-            </nav>
-            {/* would like to do a hamburger menu */}
-        </div>
-    </div>
+    <HeaderContainer>
+        <img src={logo} alt='guacdev logo'></img>
+        <h1>guacDev</h1>
+    </HeaderContainer>
 );
 
 export default Header;
