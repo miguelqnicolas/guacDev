@@ -1,19 +1,17 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
-import Header from './Header';
-import Home from './Home';
-import Services from './Services';
-import Portfolio from './Portfolio';
+import Header from './components/Header';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
 	return (
 		<>
 			<Header/>
+			<Home/>
 
-			<Route exact path='/' component={Home}></Route>
+			{/* <Route exact path='/' component={Home}></Route>
 			<Route path='/services' component={Services}></Route>
-			<Route path='/portfolio' component={Portfolio}></Route>
+			<Route path='/portfolio' component={Portfolio}></Route> */}
 		</>
 	);
 }
