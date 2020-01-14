@@ -16,7 +16,7 @@ const HomeContainer = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     .landing {
-        height: 75vh;
+        height: 85vh;
         background: linear-gradient(to right, #ffb347, #ffcc33);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;

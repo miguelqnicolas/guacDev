@@ -16,7 +16,7 @@ const FooterContainer = styled.div`
         .icons {
             a {
                 i {
-                    margin-right: 8px;
+                    margin-right: 16px;
                     font-size: 20px;
                     color: #333;
                     transition: 0.25s;
