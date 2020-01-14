@@ -16,7 +16,7 @@ const HomeContainer = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     .landing {
-        height: 85vh;
+        height: 75vh;
         background: linear-gradient(to right, #ffb347, #ffcc33);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
@@ -26,7 +26,6 @@ const HomeContainer = styled.div`
         align-items: center;
 
         h2 {
-            width: 75%;
             font-size: 3.5rem;
             font-weight: 700;
             color: #333;
@@ -190,7 +189,7 @@ const Home = () => {
                 <a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'><button>Services</button></a>
             </div>
 
-            <div className='gallery'>
+            {/* <div className='gallery'>
                 <h4>Gallery</h4>
                 <div className='carousel'>
                     <i className='fas fa-chevron-circle-left' onClick={decrement}></i>
@@ -204,7 +203,7 @@ const Home = () => {
                     
                     <i className='fas fa-chevron-circle-right' onClick={increment}></i>
                 </div>
-            </div>
+            </div> */}
 
             <div className='features'>
                 <div className='feature'>
