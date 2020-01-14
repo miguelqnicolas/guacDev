@@ -4,7 +4,7 @@ import logo from '../img/logo.png';
 
 const HeaderContainer = styled.div`
     height: 10vh;
-    width: 1229.4px;
+    width: 1297.7px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
