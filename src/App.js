@@ -37,7 +37,6 @@ const AppContainer = styled.div`
 
 	form {
 		.form-container {
-			margin-bottom: 16px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -64,20 +63,22 @@ const AppContainer = styled.div`
 					color: darkgray;
 				}
 			}
-
-			input {
-				width: 701.6px;
-				padding: 12px;
-				margin-right: 16px;
-				border: 1px solid darkgray;
-				border-radius: 3px;
-				font-family: 'Quicksand', sans-serif;
-				font-size: 1rem;
-				font-weight: 500;
-				color: #333;
-
-				::placeholder {
-					color: darkgray;
+			
+			.input-container {
+				input {
+					width: 701.6px;
+					padding: 12px;
+					margin-right: 16px;
+					border: 1px solid darkgray;
+					border-radius: 3px;
+					font-family: 'Quicksand', sans-serif;
+					font-size: 1rem;
+					font-weight: 500;
+					color: #333;
+	
+					::placeholder {
+						color: darkgray;
+					}
 				}
 			}
 
@@ -95,9 +96,14 @@ const AppContainer = styled.div`
 			}
 		}
 
-
+		.error {
+			font-size: 0.875rem;
+			font-weight: 500;
+			color: red;
+		}
 
 		.json-and-response-container {
+			margin-top: 16px;
 			display: flex;
 
 			.json-container {
@@ -141,6 +147,7 @@ const AppContainer = styled.div`
 					background: white;
 					border: 1px solid darkgray;
 					border-radius: 3px;
+					overflow: auto;
 
 					pre {
 						font-family: 'Quicksand', sans-serif;
@@ -168,6 +175,7 @@ const App = () => {
 	});
 	const [response, setResponse] = useState();
 	const [fetching, setFetching] = useState(false);
+	const [error, setError] = useState(false);
 	
 	const onChange = event => {
 		console.log(response);
@@ -185,20 +193,25 @@ const App = () => {
 				.then(response => {
 					setResponse(response.data);
 					setFetching(false);
+					setError(false);
 				})
 				.catch(error => {
 					console.log(error);
 					setFetching(false);
+					setError(true);
 				});
 		} else if (input.request === 'delete') {
 			axios.delete(input.endpoint)
 				.then(response => {
 					setResponse(response.data);
 					setFetching(false);
+					setError(false);
 				})
 				.catch(error => {
 					console.log(error);
+					setError(true);
 					setFetching(false);
+					setError(true);
 				});
 		};
 	};
@@ -219,9 +232,15 @@ const App = () => {
 						<option className='gray' value='put' disabled>Put</option>
 						<option value='delete'>Delete</option>
 					</select>
-					<input name='endpoint' placeholder='Enter endpoint' value={input.endpoint} onChange={onChange} required/>
+
+					<div className='input-container'>
+						<input name='endpoint' placeholder='Enter endpoint' value={input.endpoint} onChange={onChange} required/>
+					</div>
+					
 					{fetching ? <button type='submit'>Sending...</button> : <button type='submit'>Send</button>}
 				</div>
+
+				{error && <p className='error'>Make sure the endpoint is correct or try adding http:// or https:// before the endpoint</p>}
 
 				<div className='json-and-response-container'>
 				
