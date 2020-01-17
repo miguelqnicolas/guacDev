@@ -171,14 +171,13 @@ const App = () => {
 	const [input, setInput] = useState({
 		request: 'get',
 		endpoint: '',
-		// json: {}
+		json: ''
 	});
 	const [response, setResponse] = useState();
 	const [fetching, setFetching] = useState(false);
 	const [error, setError] = useState(false);
 	
 	const onChange = event => {
-		console.log(response);
 		setInput({
 			...input,
 			[event.target.name]: event.target.value
@@ -190,6 +189,30 @@ const App = () => {
 		setFetching(true);
 		if (input.request === 'get') {
 			axios.get(input.endpoint)
+				.then(response => {
+					setResponse(response.data);
+					setFetching(false);
+					setError(false);
+				})
+				.catch(error => {
+					console.log(error);
+					setFetching(false);
+					setError(true);
+				});
+		} else if (input.request === 'post') {
+			axios.post(input.endpoint, JSON.parse(input.json))
+				.then(response => {
+					setResponse(response.data);
+					setFetching(false);
+					setError(false);
+				})
+				.catch(error => {
+					console.log(error);
+					setFetching(false);
+					setError(true);
+				});
+		} else if (input.request === 'put') {
+			axios.put(input.endpoint, JSON.parse(input.json))
 				.then(response => {
 					setResponse(response.data);
 					setFetching(false);
@@ -228,8 +251,8 @@ const App = () => {
 				<div className='form-container'>
 					<select name='request' value={input.request} onChange={onChange}>
 						<option value='get'>Get</option>
-						<option className='gray' value='post' disabled>Post</option>
-						<option className='gray' value='put' disabled>Put</option>
+						<option value='post'>Post</option>
+						<option value='put'>Put</option>
 						<option value='delete'>Delete</option>
 					</select>
 
@@ -246,7 +269,7 @@ const App = () => {
 				
 					<div className='json-container'>
 						<label htmlFor='json'>JSON</label>
-						<textarea className='json' name='json' placeholder='JSON functionality coming soon' value={input.json} onChange={onChange} disabled/>
+						<textarea className='json' name='json' placeholder='Enter JSON' value={input.json} onChange={onChange}/>
 					</div>
 
 					<div className='response-container'>
